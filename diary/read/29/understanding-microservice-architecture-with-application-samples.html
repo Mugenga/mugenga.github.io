@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en"> <!--<![endif]-->
+
+
+<!-- Mirrored from www.bensonmurimi.com/diary/read/29/understanding-microservice-architecture-with-application-samples by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Jun 2020 18:56:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8" />
+    <title>Understanding Microservice Architecture With Application Samples :: Benson Murimi </title>
+    <meta name="author" content="Benson Murimi Wachira" />
+
+    <meta name="keywords" content="   Benson, Murimi, Wachira, html5, php, laravel, laravel 5, blog, blog, diary, angular js, web artisan, js, javascript, Kigali, Nairobi, student" />
+    <meta name="description" content="Two years ago, I wrote my yet most popular blog on [microservices vs monolith ](https://bensonmurimi.com/diary/read/8/cloud-architectures-microservice-architecture-vs-monlithic-architecture)
+The aim &#8230;" />
+
+    <meta property="og:title" content="Understanding Microservice Architecture With Application Samples :: Benson Murimi" />
+    <meta property="og:site_name" content="Benson Murimi" />
+    <meta property="og:description"  content="Two years ago, I wrote my yet most popular blog on [microservices vs monolith ](https://bensonmurimi.com/diary/read/8/cloud-architectures-microservice-architecture-vs-monlithic-architecture)
+The aim &#8230;" />
+
+    <meta  property="og:type" content="article" />
+    <meta  property="og:url" content="understanding-microservice-architecture-with-application-samples.html" />
+    <meta  property="og:image" content="../../../media/diary/understanding-microservice-architecture-with-application-samples5ed7e1b5a93f6.png" />
+
+    <script type="text/javascript">
+      var _baseUrl = "../../../index.html";
+    </script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-78818069-2"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-78818069-2');
+	</script>
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "NewsArticle",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "http://www.bensonmurimi.com/diary"
+    },
+    "headline": "Understanding Microservice Architecture With Application Samples",
+    "image": {
+      "@type": "ImageObject",
+      "url": "http://www.bensonmurimi.com/media/diary/understanding-microservice-architecture-with-application-samples5ed7e1b5a93f6.png",
+      "height": 800,
+      "width": 800
+    },
+    "datePublished": "2020-06-03 17:45:25",
+    "dateModified": "2020-06-24 18:55:51",
+    "author": {
+      "@type": "Person",
+      "name": "Benson Murimi"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Benson Murimi",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "http://www.bensonmurimi.com/assets/img/logo.jpg",
+        "width": "100px",
+        "height": "100px"
+      }
+    },
+    "description": "Two years ago, I wrote my yet most popular blog on [microservices vs monolith ](https://bensonmurimi.com/diary/read/8/cloud-architectures-microservice-architecture-vs-monlithic-architecture)
+The aim "
+  }
+</script>
+
+
+    <link href="https://plus.google.com/u/0/+BensonMurimi" rel="publisher">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <!-- Font Awesome -->
+    <link type="text/css" media="all" href="../../../assets/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- Libs CSS -->
+    <link type="text/css" media="all" href="../../../assets/boostrap-files/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="../../../assets/css/owl.carousel.css" rel="stylesheet" type="text/css" />
+    <link href="../../../assets/css/owl.theme.css" rel="stylesheet" type="text/css" />
+    <!-- Animate CSS -->
+    <link type="text/css" media="all" href="../../../assets/css/animate.css" rel="stylesheet" />
+    <!-- Template CSS -->
+    <link type="text/css" media="all" href="../../../assets/css/style.css" rel="stylesheet" />
+    <!-- Switcher CSS -->
+    <link type="text/css" media="all" href="../../../assets/css/switcher.css" rel="stylesheet" />
+    <link href="../../../assets/css/colour-scheme/color-blue.css" rel="stylesheet" type="text/css" media="all">
+    <!-- Responsive CSS -->
+    <link type="text/css" media="all" href="../../../assets/css/respons.css" rel="stylesheet" />
+    <link type="text/css" media="all" href="../../../assets/css/bootstrap-markdown.min.css" rel="stylesheet" />
+    <link type="text/css" media="all" href="../../../assets/css/social-sharing-buttons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../../../cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/styles/github.min.css">
+
+    <!-- Style Switcher -->
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../../../assets/img/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../../assets/img/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../../assets/img/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../../assets/img/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../../assets/img/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../../assets/img/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../../../assets/img/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../../assets/img/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/img/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../../assets/img/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../../assets/img/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="../../../assets/img/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="http://www.bensonmurimi.com/assets/img/favicons/ms-icon-144x144.png">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,100,100italic,200,200italic,300,300italic,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../../../index.html">BENSON MURIMI</a>
+          </div>
+          <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li class=""><a href="../../../profile.html">Profile</a></li>
+              <li class=""><a href="../../../resume.html">Resume</a></li>
+              <li class=""><a href="../../../workfolio.html">Workfolio</a></li>
+              <li class=""><a href="../../../diary.html">Blog</a></li>
+              <li class=""><a href="../../../contact.html">Contact</a></li>
+                                            <li><a href="../../../login.html">Login</a></li>
+              
+            </ul>
+              <div class="col-sm-3 col-md-3">
+                  <form class="navbar-form" role="search" method="get" action="https://www.bensonmurimi.com/diary/search">
+                      <div class="input-group">
+                          <input type="text" class="form-control" placeholder="Quick search" name="q">
+                          <div class="input-group-btn">
+                              <button class="btn btn-default search-box" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                          </div>
+                      </div>
+                  </form>
+              </div>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+
+<!-- Load page -->
+<div class="animationload">
+    <div class="loader"></div>
+</div>
+<!-- End load page -->
+
+<div id="wraper">
+
+    <!-- Start Head section -->
+    <header class="head">
+        <!-- start container -->
+        <div class="container">
+            <!-- start row -->
+            <div class="row">
+                <div class="col-xs-8 col-sm-11 col-lg-11">
+                    <img class="logo-page" src="../../../assets/img/diary_l.png" alt="Ukieweb">
+                    <!-- Title Page -->
+                    <h2 class="title">Diary</h2>
+                    <!-- Description Page -->
+                    <h4 class="sub-title">I write here what I learn</h4>
+                </div>
+                <div class="col-xs-4 col-sm-1 col-lg-1 text-right">
+                    <a href="../../../index.html" class="btn-close hover-animate"></a>
+                </div>
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container -->
+    </header>
+    <!-- End Head section -->
+
+    <section class="blog padding-block">
+        <!-- start container -->
+        <div class="container">
+            <!-- start row -->
+            <div class="row">
+                <div class="col-lg-8 col-sm-12 col-xs-12 ">
+                  <style type="text/css">
+
+</style>
+<div class="post one-post">
+  <!-- start photo -->
+  <div class="photo">
+    <img src="../../../media/diary/understanding-microservice-architecture-with-application-samples5ed7e1b5a93f6.png" class="main-photo" alt="Understanding Microservice Architecture With Application Samples">
+  </div>
+  <!-- end photo -->
+  <!-- start title post -->
+  <h3 class="title title-blog">Understanding Microservice Architecture With Application Samples</h3>
+  <!-- end title post -->
+  <div class="entry-byline">
+    <i class="fa fa-user"></i>
+    <span class="entry-author right-border">
+      <a href="../../../profile/2.html" title="Posts by Benson Murimi" rel="author">
+        <span>Benson Murimi</span>
+      </a>
+    </span>
+    <i class="fa fa-globe"></i>
+    <span class="entry-author right-border">
+      <a href="../../category/cloud-computing.html" title="Category of cloud-computing" rel="author">
+        <span>Cloud Computing</span>
+      </a>
+    </span>
+    <i class="fa fa-clock-o"></i>
+    <time class="entry-published right-border">03/06/2020</time>
+    <i class="fa fa-comment"></i>
+    <span class="comments-link right-border">0 Comments</span>
+    <i class="fa fa-eye"></i>
+    <span class="entry-author">171 Visits</span>
+
+  </div>
+  <!-- start text post -->
+  <div class="blog-body">
+    <p class="blog-note"><p>Two years ago, I wrote my yet most popular blog on <a href="https://bensonmurimi.com/diary/read/8/cloud-architectures-microservice-architecture-vs-monlithic-architecture">microservices vs monolith </a>
+The aim of the blog was to introduce my readers to the advantages of microservice architecture and how that compares to a monolith architecture. While there has been a lot of growth in adoption of microservices recently, there is still big knowledge gaps on how to design your architecture, decoupling already existing monolith application, deploying and monitoring of applications among others.</p>
+<p>In this blog, I will guide you through some of the considerations you need to make before shifting to microservice architecture using some simple application that I developed using Nodejs and MongoDB.</p>
+<p>The code is available on my <a href="https://github.com/wbenmurimi/microservices">Github repository</a>which you can clone follow through the blog and even modify to your liking.</p>
+<p>There are three microservices and each has its own collection (database) and can operate independently. The microservices are based on subdomains around the concept on an e commerce platform.</p>
+<ol>
+<li>
+<strong>Users microservice:</strong> Creates users and manages authentication</li>
+<li>
+<strong>Products microservice:</strong> Creates products and manages product</li>
+<li>
+<strong>Orders microservice:</strong> Manages the orders and interacts with the users and products collections to retrieve data. This includes self authentication for the users instead of making an extra API call to users microservice to check if a <em>JWT token</em> is correct.</li>
+</ol>
+<h3>Running the applications</h3>
+<p>Download/ clone the code from GitHub <code>git clone https://github.com/wbenmurimi/microservices.git</code></p>
+<p><strong>Manually</strong></p>
+<p>Update the database connection by updating the variable DATABASE_URL on all the .env files in the app folders. You can use locally hosted mongodb or configure a free mongo atlas cluster for testing.</p>
+<p>Install the node_modules in each of the applications by running <code>npm install</code></p>
+<p>Run the server <code>nodemon serve</code></p>
+<p>Interact with the api via postman/equivalent API testing tool</p>
+<p><strong>Docker</strong></p>
+<p>With this approach ensure that you have docker installed. Update the database connection by updating the variable DATABASE_URL on all the .env files in the app folders. You can use locally hosted mongodb or configure a free mongo atlas cluster for testing.</p>
+<p>Create docker images for each microservice. Note the <strong>[.]</strong> at the end. It means create the container from the content in the current directory. Otherwise you can also provide relative or absolute path to the project folder.</p>
+<pre><code>
+    docker build --no-cache --rm --tag users:v_1 .
+
+    docker build --no-cache --rm --tag products:v_1 .
+
+    docker build --no-cache --rm --tag orders:v_1.
+
+</code></pre>
+<p>Run the docker images. Note that the port numbers here are the ones that you have exposed in the Dockerfile. If you change either make sure they are the same including on the API endpoint</p>
+<pre><code>
+    docker run --rm -d -p 3000:3000 users:v_1
+
+    docker run --rm -d -p 3001:3001 products:v_1
+
+    docker run --rm -d -p 3002:3002 orders:v_1
+
+</code></pre>
+<p>Interact with the API via postman/equivalent API testing tool
+A couple of docker commands you can use to interact with docker containers are;</p>
+<p>List running containers <code>docker ps -a</code></p>
+<p>Show the logs of the running container
+<code>docker logs [container_id]</code></p>
+<p>Stop a running container
+<code>docker stop  [container_id]`` ` Start a container</code>docker start [container_id```</p>
+<p>API ENDPOINTS</p>
+<p><strong>GET</strong> <em>http://localhost:3000/api/users/</em> Get all the users</p>
+<p><strong>POST</strong> <em>http://localhost:3000/api/users/register</em> Register a user</p>
+<pre><code>
+    {
+    &quot;name&quot;: &quot;My User&quot;,
+
+    &quot;email&quot;: &quot;<a href="../../../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="177a6e6264726557707a767e7b3974787a">[email&#160;protected]</a>&quot;,
+
+    &quot;password&quot;: &quot;myuser&quot;
+    }
+
+
+</code></pre>
+<p><strong>POST</strong> _http://localhost:3000/api/users/login _Login a user</p>
+<pre><code>
+
+    {
+    &quot;email&quot;: &quot;<a href="../../../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="4a27333f392f380a2d272b232664292527">[email&#160;protected]</a>&quot;,
+
+    &quot;password&quot;: &quot;myuser&quot;
+    }
+
+
+</code></pre>
+<p><strong>GET</strong> <em>http://localhost:3001/api/products/</em> Get all products</p>
+<p><strong>POST</strong> <em>http://localhost:3001/api/products/</em> Create a new product</p>
+<pre><code>
+
+    {
+
+    &quot;name&quot;: &quot;Bread&quot;,
+
+    &quot;cost&quot;: &quot;1,200&quot;
+    }
+
+</code></pre>
+<p><strong>GET</strong> <em>http://localhost:3001/api/products/{id}</em> Get a product with a given id</p>
+<pre><code>Product id
+</code></pre>
+<p><strong>GET</strong> <em>http://localhost:3002/api/orders</em> Get all orders</p>
+<pre><code>Bearer JWT token
+</code></pre>
+<p><strong>POST</strong> <em>http://localhost:3002/api/orders</em> Create an new order</p>
+<pre><code>
+
+    {
+
+    &quot;product&quot;: &quot;5e7dee2e495a5c42a3460656&quot;
+
+    }
+
+    Bearer JWT token
+
+</code></pre>
+<p>Interact with the API as documented above and do not forget to set the correct headers [<em>Content-Type and Accept headers should be application/json for all API calls]</em>. Start by creating a user and then login.</p>
+<p>Take note of the JWT token returned as shown in the screenshot below. Note that the token is only valid for one day after generation. For further API calls on the order microservice you will need to generate another token.</p>
+<p><img src="../../../../bensonmurimi.com/media/diary/microservices/microservice-user-authentication.png" alt="Microservices user authentication" title="Microservices user authentication" /></p>
+<p>Create products using the API. When you list the products, take note of one product ID that you can use to create an order.</p>
+<p>To interact with the orders microcervice, you will need to use the JWT token returned when you authenticate to the users microservice as shown in the screenshot below. </p>
+<p><img src="../../../../bensonmurimi.com/media/diary/microservices/microservice-jwt-token.png" alt="JWT authentication token" title="JWT authentication token" /></p>
+<h3>How To Convert A Monolith to Microservice</h3>
+<p>There are a dozen approaches that you can use to change your monolith application to a microservice. Below are some approaches that I recommend.</p>
+<ol>
+<li>
+<p><strong>Separate Backend and Frontend:</strong> If the frontend is still part of your application, separate them into different services. This means the backend will expose APIs that will be consumed by the frontend. At this stage, you should not focus on re-writing your application just utilize existing code base and keep it simple. Some of the frameworks you can consider for the frontend include angularjs, reactjs and vuejs.</p>
+</li>
+<li>
+<p><strong>Stop making the monolith bigger:</strong> Most often extending and managing monoliths become a complex task the bigger it gets especially when adding new features. This approach means that when you are implementing new functionality you should not add more code to the monolith. Instead, the idea is to put that new code in a standalone microservice. This new microservice could function by making API calls to the mother monolith application or accessing monolith’s DB directly. This is a good step towards later decoupling the monolith as described below.</p>
+</li>
+<li>
+<p><strong>Decouple the Monolith:</strong> This approach involves picking modules from the monolith and developing one after the other while still maintaining and using the monolith code. One of the common pitfalls is attempting to re-write everything from scratch. With a new architecture and a steep learning curve, it is always a good idea to avoid this move especially for production applications. Here are a couple of things to guide you on which module you should start with;</p>
+<ul>
+<li>Modules that change frequently</li>
+<li>Modules that require different resources</li>
+<li>Modules that are easy to rebuild and not mission critical</li>
+</ul>
+</li>
+</ol>
+<h3>Microservice Transition Success Tips</h3>
+<p>Here are some tips you should follow to ensure a successful transition from a monolith to a mmicroservice architecture.</p>
+<ol>
+<li>
+<p>I’m always an advocate of <em>“lazy decoupling”</em> meaning that even though the end goal is to have independent and highly manageable services, the more services you end up with the more difficult it is to manage and even debug when things aren’t working fine. Reducing the number of services also means you will be making fewer API calls between the services which will improve the performance of the applications.</p>
+</li>
+<li>
+<p>While one of the benefits of microservices is being able to write them in different programming languages, do not go that route at the beginning. Having one stack for your services improves interoperability, is easier to manage and update and makes it easier to re-use components hence quick development.</p>
+</li>
+<li>
+<p>Services must be cohesive. A service should implement a small set of strongly related functions. This builds on the principle that things that change together should be packaged together to ensure that each change affect only one service.</p>
+</li>
+</ol>
+<p><strong>Reference:</strong></p>
+<ul>
+<li>
+<a href="https://microservices.io/">microservices io</a>
+</li>
+<li>
+<a href="https://www.nginx.com/blog/">Nginx blog</a>
+</li>
+</ul>
+</p>
+  </div>
+  <aside class="diary-tags">
+    <div class="tagcloud">
+          </div>
+  </aside>
+  <!-- end text post -->
+
+  <!-- start post pagination -->
+  <div class="share-buttons" style="margin-top:50px; text-align:center;">
+    <h4>Share this diary</h4>
+    <!-- Facebook -->
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http://www.bensonmurimi.com/diary/read/29/understanding-microservice-architecture-with-application-samples" title="Share on Facebook" target="_blank" class="btn btn-facebook social-btn"><i class="icon-facebook-1"></i> Facebook</a>
+    <!-- Twitter -->
+    <a href="https://twitter.com/home?status=http://www.bensonmurimi.com/diary/read/29/understanding-microservice-architecture-with-application-samples" title="Share on Twitter" target="_blank" class="btn btn-twitter social-btn"><i class="icon-twitter-1"></i> Twitter</a>
+    <!-- Google+ -->
+    <a href="https://plus.google.com/share?url=http://www.bensonmurimi.com/diary/read/29/understanding-microservice-architecture-with-application-samples" title="Share on Google+" target="_blank" class="btn btn-googleplus social-btn"><i class="icon-gplus"></i> Google+</a>
+
+  </div>
+
+  <div class="clearfix"></div>
+  <!-- end post pagination -->
+
+  <!-- start post comments -->
+  <div class="post-comments">
+    <a name="comments"></a>
+    <h3>0 Comments</h3>
+    <div class="post-content-txt">
+      
+      <div class="clearfix"></div>
+
+    </div>
+  </div>
+  <!-- end post comments -->
+    <p>
+    To make a comment you have to <a href="../../../logine510.html?next=http%3A%2F%2Fwww.bensonmurimi.com%2Fdiary%2Fread%2F29%2Funderstanding-microservice-architecture-with-application-samples">login</a>
+  </p>
+  </div>
+                </div>
+              <div class="col-lg-4 col-sm-12 col-xs-12 ">
+    <!-- start slidebar -->
+
+    <aside class="widget widget_categories">
+        <h3 class="widget-title">Categories</h3>
+        <ul>
+                        <li class="cat-item cat-item-6"><a href="../../category/laravel-5.html">Laravel 5</a></li>
+                        <li class="cat-item cat-item-6"><a href="../../category/dieting.html">Dieting</a></li>
+                        <li class="cat-item cat-item-6"><a href="../../category/cloud-computing.html">Cloud Computing</a></li>
+                        <li class="cat-item cat-item-6"><a href="../../category/database.html">Database</a></li>
+                        <li class="cat-item cat-item-6"><a href="../../category/software-hacks.html">Software hacks</a></li>
+                        <li class="cat-item cat-item-6"><a href="../../category/machine-learning.html">Machine learning</a></li>
+                        <li class="cat-item cat-item-6"><a href="../../category/fitness.html">Fitness</a></li>
+                        <li class="cat-item cat-item-6"><a href="../../category/sports.html">Sports</a></li>
+                        <li class="cat-item cat-item-6"><a href="../../category/devops.html">DevOps</a></li>
+                        <li class="cat-item cat-item-6"><a href="../../category/kubernetes.html">Kubernetes</a></li>
+                        <li class="cat-item cat-item-6"><a href="../../category/hiking.html">Hiking</a></li>
+            
+        </ul>
+    </aside>
+
+    <aside class="widget widget_recent_entries">
+        <h3 class="widget-title">Popular Diary</h3>
+        <ul>
+                        <li><a href="../8.html">Cloud Architectures Microservice Architecture vs Monlithic Architecture</a></li>
+                        <li><a href="../9.html">How to Setup Kubernetes Cluster on AWS Using KOPS - Full Guide</a></li>
+                        <li><a href="../6.html">Face Recognition Using Microsoft Face Api</a></li>
+                        <li><a href="../10.html">How to Lose 11 Pounds in 3 Weeks [ Intermittent Fasting ]</a></li>
+                        <li><a href="../22.html">Setting up Bare-metal Kubernetes From Scratch - Easy Way [Part 1]</a></li>
+            
+        </ul>
+    </aside>
+    <aside class="widget widget_recent_entries">
+        <h3 class="widget-title">Recent Diary</h3>
+        <ul>
+                        <li><a href="../29.html">Understanding Microservice Architecture With Application Samples</a></li>
+                        <li><a href="../27.html">Securing Your Web App With Free SSL Certificate in 10 Minutes</a></li>
+                        <li><a href="../26.html">I Hiked 10th Highest Mountain In Rwanda Alone [Mt Kabuye]</a></li>
+                        <li><a href="../25.html">How To Host Your First Web Application [Apache2 &amp; Ubuntu 18.04]</a></li>
+                        <li><a href="../24.html">How I Run 110 KM Last Month</a></li>
+            
+        </ul>
+    </aside>
+
+                                                                    
+    <aside class="widget widget_tag_cloud">
+        <h3 class="widget-title">Tags</h3>
+        <div class="tagcloud">
+                        <a href="../../tag/cloud-computing.html" class="hover-animate">cloud-computing</a>
+                        <a href="../../tag/kubernetes.html" class="hover-animate">kubernetes</a>
+                    </div>
+    </aside>
+
+    <!-- end slidebar -->
+</div>
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container -->
+    </section>
+<!-- Start Footer section -->
+<footer class="footer">
+    <!-- start container -->
+    <div class="container">
+        <!-- start row -->
+        <div class="row">
+            <!-- start phone number -->
+            <div class="col-xs-12 col-sm-6 col-lg-3">
+                <a href="#" class="hover-animate">
+                    <span class="ukie-icons hover-animate"><i class="fa fa-phone"></i></span> +2 Fifty 739 374 045
+                </a>
+            </div>
+            <!-- end phone number -->
+            <!-- start email -->
+            <div class="col-xs-12 col-sm-6 col-lg-3">
+                <a href="#" class="hover-animate">
+                    <span class="ukie-icons hover-animate"><i class="fa fa-paper-plane"></i></span> wbenmurimi[at]gmail[dot]com
+                </a>
+            </div>
+            <!-- end email -->
+            <!-- start address -->
+            <div class="col-xs-12 col-sm-6 col-lg-3">
+                <a href="#" class="hover-animate">
+                    <span class="ukie-icons hover-animate"><i class="fa fa-map-marker"></i></span> Kigali, Rwanda
+                </a>
+            </div>
+            <!-- end address -->
+            <!-- start Copyright-animate"> -->
+
+            <!-- start Copyright -->
+            <div class="col-xs-12 col-sm-6 col-lg-3 text-right">
+                <span class="copyright">2020 &copy; Benson Murimi</span>
+            </div>
+            <!-- end Copyright -->
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- end container -->
+</footer>
+<!-- End Footer section -->
+
+</div>
+
+<!-- Scroll to Top -->
+<a href="#" class="btn scrollToTop"><i class="fa fa-angle-up"></i></a>
+<!-- End Scroll to Top -->
+
+<!-- Scripts -->
+
+<script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="../../../assets/js/jquery-1.11.2.min.js" type="text/javascript"></script>
+<script src="../../../assets/boostrap-files/js/bootstrap.min.js" type="text/javascript"></script>
+
+
+<script src="../../../assets/js/jquery.countTo.js" type="text/javascript"></script>
+<script src="../../../assets/js/jquery.appear.js" type="text/javascript"></script>
+<script src="../../../assets/js/jquery.nicescroll.min.js" type="text/javascript"></script>
+<script src="../../../assets/js/jquery.mixitup.min.js" type="text/javascript"></script>
+<script src="../../../assets/js/jquery.magnific-popup.min.js" type="text/javascript"></script>
+<script src="../../../assets/js/owl.carousel.min.js" type="text/javascript"></script>
+<script src="../../../assets/js/jquery.inview.min.js" type="text/javascript"></script>
+<script src="../../../assets/js/jquery.knob.min.js" type="text/javascript"></script>
+<script src="../../../assets/js/jquery.cookie.js" type="text/javascript"></script>
+<script src="../../../assets/js/scripts.js" type="text/javascript"></script>
+<script src="../../../assets/js/markdown.js" type="text/javascript"></script>
+<script src="../../../assets/js/bootstrap-markdown.js" type="text/javascript"></script>
+<script src="../../../assets/js/to-bootstrap.js" type="text/javascript"></script>
+<script src="../../../../cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+<script src="../../../assets/js/gmaps.js" type="text/javascript"></script>
+<script src="../../../assets/js/prettify.js" type="text/javascript"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script type="text/javascript">
+    $('.social-btn').click(function(event){
+        var href=$(this).attr('href');
+         window.open(href, "_blank", "toolbar=yes, scrollbars=yes, resizable=yes, top=0, left=auto, width=350, height=400");
+         event.preventDefault();
+    });
+
+</script>
+<script type="text/javascript">
+    var map;
+    $(document).ready(function(){
+      prettyPrint();
+      map = new GMaps({
+        div: '#map',
+        lat: -1.9444561,
+        lng: 30.0897
+      });
+      map.addMarker({
+        lat: -1.9444561,
+        lng: 30.0897,
+        title: 'Benson Murimi Wachira',
+        infoWindow: {
+          content: '<div  align="center"><img src="http://www.bensonmurimi.com/assets/img/benson.jpg" class="img-circle" width="70px" /><h2>Benson Murimi</h2>  <p><strong>codesum</strong>, Telecom House,Floor#4th, Kigali, Rwanda</p></div>'
+        }
+      });
+    });
+  </script>
+
+
+</body>
+
+<!-- Mirrored from www.bensonmurimi.com/diary/read/29/understanding-microservice-architecture-with-application-samples by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Jun 2020 18:57:03 GMT -->
+</html>

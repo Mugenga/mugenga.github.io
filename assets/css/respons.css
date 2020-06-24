@@ -1,0 +1,110 @@
+@media (min-width: 992px) and (max-width: 2000px) {
+	#wraper{
+        width: 100%;
+    }
+	.blog-body img{
+	  width: 100% !important;
+	  height: auto;
+	}
+	
+}	
+
+@media (min-width: 770px) and (max-width: 991px) {
+    .row{
+        margin-left: 0;
+        margin-right: 0;
+    }
+	.blog-body img{
+	  width: 100% !important;
+	  height: auto;
+	}
+    .menu .menu-li {
+        margin-bottom: 20px;
+    }
+    .footer .col-sm-6{
+        text-align: left;
+        margin: 5px 0;
+    }
+    .col-xs-12, .col-sm-12{
+        margin-bottom: 30px;
+    }
+    .col-xs-12:last-child, .col-sm-12:last-child{
+        margin-bottom: 0px;
+    }
+}
+
+@media (max-width: 769px) {
+	
+   head {
+        padding-top: 50px !important;
+        padding-bottom: 30px;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+   }
+    .blog-body img{
+	    width: 100% !important;
+	    height: auto;
+	}
+	.main-photo{
+	    width: 100% !important;
+   }
+    #wraper{
+        font-size: 16px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .home-header{
+        text-align: center;
+    }
+    .home-header .foto{
+        display: block;
+        margin: 0 auto;
+    }
+    .home-header .title{
+        margin-top: 0px;
+        font-size: 36px;
+        line-height: 40px;
+    }
+    .home-header .sub-title {
+        line-height: 28px;
+        font-size: 20px;
+    }
+    .head .logo-page {
+        margin-right: 10px;
+    }
+    .head .title {
+        font-size: 32px;
+        line-height: 38px;
+    }
+    .head .sub-title {
+        font-size: 12px;
+        line-height: 18px;
+    }
+    .block-grey {
+        padding: 20px 10px;
+        font-size: 14px;
+    }
+    .skills .circle-progress-block {
+        display: block;
+        margin: 0 auto;
+    }
+    .footer .col-sm-6, .footer .col-xs-12{
+        text-align: center;
+    }
+}
+
+@media (max-width: 624px) {
+	
+    .blog .post-user-info{
+        width: 100%;
+    }
+    .blog .post-comment-txt{
+        width: 100%;
+    }
+    .blog .post-comment-txt:after, .blog .post-comment-txt:before {
+        border: 0;
+    }
+    .blog .post iframe{
+        height: 197px;
+    }
+}
